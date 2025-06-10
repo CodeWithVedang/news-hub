@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern News Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><i class="fa-solid fa-newspaper"></i> News Hub</div>
+            <div class="nav-links">
+                <a href="#" class="active" id="nav-home">Home</a>
+                <a href="#" id="nav-bookmarks">Bookmarks</a>
+                
+            </div>
+        </nav>
+        <div class="search-bar-bg">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for news, topics, publishers, or keywords...">
+                <button onclick="fetchNews()"><i class="fa fa-search"></i> Search</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="controls">
+            <div class="action-row">
+                <button class="filter-btn" id="toggleFilterBtn" title="Open Filter" aria-label="Open Filter">
+                    <i class="fa-solid fa-filter"></i>
+                    <span>Filter</span>
+                </button>
+                <button class="bookmark-action-btn" onclick="showBookmarks()"><i class="fa fa-star"></i> <span>Bookmarks</span></button>
+            </div>
+            <form class="filter-panel" id="filterPanel" onsubmit="return false;">
+                <div>
+                    <label for="categorySelect"><i class="fa-solid fa-layer-group"></i> Category</label>
+                    <select id="categorySelect">
+                        <option value="">All</option>
+                        <option value="business">Business</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="general">General</option>
+                        <option value="health">Health</option>
+                        <option value="science">Science</option>
+                        <option value="sports">Sports</option>
+                        <option value="technology">Technology</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="sortSelect"><i class="fa-solid fa-sort"></i> Sort</label>
+                    <select id="sortSelect">
+                        <option value="publishedAt">Latest</option>
+                        <option value="relevancy">Relevancy</option>
+                        <option value="popularity">Popularity</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="fromDate"><i class="fa-solid fa-calendar-days"></i> From</label>
+                    <input type="date" id="fromDate">
+                </div>
+                <div>
+                    <label for="toDate"><i class="fa-solid fa-calendar-days"></i> To</label>
+                    <input type="date" id="toDate">
+                </div>
+            </form>
+        </div>
+
+        <div id="newsSection">
+            <div class="section-title">Top Stories</div>
+            <div class="loader" id="loader">Loading...</div>
+            <div class="error" id="error"></div>
+            <div class="news-grid" id="newsGrid"></div>
+        </div>
+
+        <div class="bookmarks-section" id="bookmarksSection" style="display:none;">
+            <h2><i class="fa fa-star"></i> Bookmarked Articles</h2>
+            <div class="news-grid" id="bookmarksGrid"></div>
+        </div>
+
+        <div class="detail-page" id="detailPage"></div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#" id="footer-home">Home</a>
+            <a href="#" id="footer-bookmarks">Bookmarks</a>
+            <a href="https://newsapi.org/" target="_blank">Powered by NewsAPI</a>
+            <a href="https://github.com/CodeWithVedang" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+        &copy; 2025 News Hub &mdash; Crafted by CodeWithVedang
+    </footer>
+
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>
