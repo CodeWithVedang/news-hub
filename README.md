@@ -56,6 +56,8 @@ Open index.html in your browser.
 
 Make sure you're connected to the internet for API requests and external icon fonts.
 
+```bash
+
 ✅ Testing Features
 🖱️ Save Article: Click the save button on any news card and check under "Saved Articles".
 
@@ -66,15 +68,6 @@ Make sure you're connected to the internet for API requests and external icon fo
 📱 Responsive Check: Resize browser or test on mobile devices.
 
 🗑️ Local Storage: Clear saved data by clearing browser local storage.
-
-📸 Screenshots
-Add screenshots for:
-
-Homepage (desktop)
-
-Mobile view
-
-Saved Articles page
 
 🤝 Contributing
 Have suggestions or found a bug?
